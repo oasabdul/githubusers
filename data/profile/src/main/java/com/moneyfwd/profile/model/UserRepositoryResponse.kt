@@ -7,7 +7,7 @@ data class UserRepositoryResponse(
     val language: String?,
     val stargazersCount: Int,
     val description: String?,
-    val htmlUrl: String,
+    val htmlUrl: String?,
     val fork: Boolean
 ) {
     fun mapToDomainModel() = RepositoryItem(
@@ -15,6 +15,6 @@ data class UserRepositoryResponse(
         language = language ?: "",
         stars = stargazersCount,
         description = description ?: "",
-        htmlUrl = htmlUrl
+        htmlUrl = htmlUrl ?: ""
     )
 }

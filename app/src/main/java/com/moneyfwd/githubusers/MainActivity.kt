@@ -44,7 +44,7 @@ class MainActivity : ComponentActivity() {
         NavHost(navController = navHostController, startDestination = SearchScreen.route) {
             composable(SearchScreen.route) { SearchScreen(viewModel = get()) }
             composable(ProfileScreen.route) { backStackEntry ->
-                val username = backStackEntry.arguments?.getString("user") ?: ""
+                val username = backStackEntry.arguments?.getString("username") ?: ""
                 ProfileScreen(username = Username(username), viewModel = remember { get() })
             }
             composable(ExternalWebLink.route) { backStackEntry ->

@@ -10,7 +10,7 @@ import retrofit2.HttpException
 class ProfileRepositoryImpl(private val apiService: ProfileApiService) : ProfileRepository {
     override suspend fun getUserRepositories(username: Username): GetUserRepositoriesResponse {
         try {
-            val response = apiService.getUserRepositories(username)
+            val response = apiService.getUserRepositories(username.value)
 
             //according to requirements, forked repositories should not be included
             val filteredResponse = response.filterNot { it.fork }
@@ -25,7 +25,7 @@ class ProfileRepositoryImpl(private val apiService: ProfileApiService) : Profile
 
     override suspend fun getUserProfile(username: Username): GetUserProfileResponse {
         try {
-            val profileResponse = apiService.getUserProfile(username)
+            val profileResponse = apiService.getUserProfile(username.value)
             return GetUserProfileResponse.Success(userProfileDetails = profileResponse.mapToDomainModel())
         } catch (httpException: HttpException) {
             return GetUserProfileResponse.NetworkError

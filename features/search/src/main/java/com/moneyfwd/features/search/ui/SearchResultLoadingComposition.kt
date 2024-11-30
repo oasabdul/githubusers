@@ -24,7 +24,7 @@ import com.google.accompanist.placeholder.material.shimmer
 @Composable
 fun SearchResultLoadingComposition() {
     LazyColumn(modifier = Modifier.fillMaxSize()) {
-        items(5) { // github user placeholder for 5 items
+        items(10) { // github user placeholder for 5 items
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
