@@ -11,6 +11,7 @@ import retrofit2.HttpException
 
 class ProfileRepositoryImpl(private val apiService: ProfileApiService) : ProfileRepository {
     override suspend fun getUserRepositories(username: Username): GetUserRepositoriesResponse {
+        return userRepositoriesDummy()
         try {
             val response = apiService.getUserRepositories(username)
 
@@ -26,6 +27,7 @@ class ProfileRepositoryImpl(private val apiService: ProfileApiService) : Profile
     }
 
     override suspend fun getUserProfile(username: Username): GetUserProfileResponse {
+        return userProfileDummy()
         try {
             val profileResponse = apiService.getUserProfile(username)
             return GetUserProfileResponse.Success(userProfileDetails = profileResponse.mapToDomainModel())

@@ -12,6 +12,7 @@ import retrofit2.HttpException
 
 class SearchUserRepositoryImpl(private val apiService: SearchApiService): SearchUsersRepository {
     override suspend fun searchUsers(searchQuery: SearchQuery): SearchUserRepositoryResponse {
+        return searchDummy()
         try {
             val request = apiService.searchUsers(searchQuery.query)
             return Success(searchResults = request.items.map { it.mapToDomainModel() })
