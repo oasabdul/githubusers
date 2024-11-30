@@ -9,8 +9,14 @@ This project is a GitHub User Explorer app. The app allows users to search for G
 - View a list of a user's public repositories, excluding forked repositories.
 - Navigate to a specific GitHub repository web page directly from the app.
 
+| Search screen | Profile screen |
+| --- | --- |
+| <img src="https://github.com/user-attachments/assets/5571dd7d-3408-4842-987b-dfadbfff96f0" alt="Screenshot" height="600"> | <img src="https://github.com/user-attachments/assets/8f4b00b4-c877-428c-8dc4-76c3b749ce42" alt="Screenshot" height="600"> |
+
+
 ## Architecture
 The project follows **Clean Architecture** principles and is structured into three main layers:
+
 1. **Presentation Layer** (MVVM Pattern): This includes all UI components, primarily built using Jetpack Compose for a modern and declarative UI approach.
 2. **Domain Layer**: Contains business logic in the form of use cases. This layer is isolated from other layers, ensuring it has no dependencies on frameworks or data layers.
 3. **Data Layer**: Handles data operations, including communication with remote data sources (API calls). It includes repository implementations and mapping logic for transforming data models.
