@@ -79,5 +79,4 @@ The app has minimal error-handling logic to manage network errors, using custom 
 ## Conclusion
 This project demonstrates Clean Architecture, modular development, modern UI design with Jetpack Compose, and comprehensive testing. The codebase is clean, maintainable, and scalable, reflecting the best practices of Android development.
 
-Feel free to reach out if you have any questions or need further details regarding the project!
 
