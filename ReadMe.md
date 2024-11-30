@@ -64,8 +64,9 @@ The project follows a test-driven approach to ensure code reliability and mainta
 ## How to Build and Run
 1. **Clone the Repository**: Use `git clone` to clone the repository from GitHub.
 2. **Open in Android Studio**: Open the cloned project using the latest version of Android Studio.
-3. **Run the App**: Connect a device/emulator and click the Run button.
-4. **Testing**: Run unit tests with the `./gradlew test` command or from Android Studio's test runner.
+3. **Add your Personal Access Token**: Add your Github personal access token to `local.properties` file using the property name `githubAccessToken`.
+4. **Run the App**: Connect a device/emulator and click the Run button.
+5. **Testing**: Run unit tests with the `./gradlew test` command or from Android Studio's test runner.
 
 ## Project Highlights
 ### Clean Architecture with Jetpack Compose
